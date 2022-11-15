@@ -1,8 +1,14 @@
-# RcloneMountGUI
+# RcloneMountGUIx2
 
 GUI for Rclone Mount written in C#
 
-![image](https://user-images.githubusercontent.com/37624905/181905372-6ed2ad61-b660-473d-a8e0-51049317d1bf.png)
+![image](https://github.com/anonwins/RcloneMountGUIx2/blob/master/screenshot.png)
+
+This is a fork from ImnLu/RcloneMountGUI. These changes are implemented:
+
+~ Two drives can be configured and run. Double the fun!
+~ Add read-only mounting option
+~ Add custom volume labels
 
 *Requirements*
 1. rclone.exe (https://github.com/rclone/rclone/releases/)
