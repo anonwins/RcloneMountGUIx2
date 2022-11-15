@@ -379,18 +379,6 @@ namespace RcloneMountGUI
 
             System.Threading.Thread.Sleep(2500);
 
-            // If there is a new version of the application, it will ask for an update
-            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
-            {
-                if (!checkNewVersion("https://raw.githubusercontent.com/anonwins/RcloneMountGUIx2/master/md5"))
-                {
-                    if (MessageBox.Show("A new version of the app is available. Would you like to update?", "Rclone Mount Update", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                    {
-                        updateApp("https://raw.githubusercontent.com/anonwins/RcloneMountGUIx2/master/RcloneMountGUI.exe");
-                        Application.Restart();
-                    }
-                }
-            }
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -403,6 +391,7 @@ namespace RcloneMountGUI
                 rcloneFileName = Path.GetFileNameWithoutExtension(openFileDialogRclone.SafeFileName);
             }
         }
+
 
         private void btnMount_Click(object sender, EventArgs e)
         {
