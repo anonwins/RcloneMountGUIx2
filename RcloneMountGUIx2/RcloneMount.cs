@@ -273,18 +273,8 @@ namespace RcloneMountGUI
 
         private void RepaintBoxes()
         {
-            var drive_enabled = checkBoxDriveEnabled.Checked;
-            txtRemoteName.Enabled = drive_enabled;
-            comboBoxMount.Enabled = drive_enabled;
-            txtDriveLetter.Enabled = drive_enabled;
-            checkBoxReadonly.Enabled = drive_enabled;
-            textBoxDriveLabel.Enabled = drive_enabled;
-            var drive2_enabled = checkBoxDriveEnabled2.Checked;
-            txtRemoteName2.Enabled = drive2_enabled;
-            comboBoxMount2.Enabled = drive2_enabled;
-            txtDriveLetter2.Enabled = drive2_enabled;
-            checkBoxReadonly2.Enabled = drive2_enabled;
-            textBoxDriveLabel2.Enabled = drive2_enabled;
+            panelDrive.Enabled = checkBoxDriveEnabled.Checked;
+            panelDrive2.Enabled = checkBoxDriveEnabled2.Checked;
         }
 
         private string calculateMd5(string file)
