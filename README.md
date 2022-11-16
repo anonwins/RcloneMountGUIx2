@@ -2,7 +2,7 @@
 
 GUI for Rclone Mount written in C#
 
-![image](https://github.com/anonwins/RcloneMountGUIx2/blob/master/screenshot.png)
+![image](https://github.com/anonwins/RcloneMountGUIx2/blob/master/screenshot-v0.3.png)
 
 This is a fork from ImnLu/RcloneMountGUI. These changes are implemented:
 
