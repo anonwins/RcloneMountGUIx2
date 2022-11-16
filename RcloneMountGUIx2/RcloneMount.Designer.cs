@@ -47,22 +47,23 @@
             this.btnConfig = new System.Windows.Forms.Button();
             this.checkBoxReadonly = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxDriveLabel = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxDriveEnabled = new System.Windows.Forms.CheckBox();
+            this.CacheHelpLink = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxDriveLabel2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxDriveEnabled2 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxReadonly2 = new System.Windows.Forms.CheckBox();
             this.comboBoxMount2 = new System.Windows.Forms.ComboBox();
             this.txtRemoteName2 = new System.Windows.Forms.TextBox();
+            this.CacheHelpLink2 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDriveLetter2 = new System.Windows.Forms.TextBox();
-            this.CacheHelpLink2 = new System.Windows.Forms.LinkLabel();
-            this.CacheHelpLink = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.checkBoxDriveEnabled = new System.Windows.Forms.CheckBox();
-            this.checkBoxDriveEnabled2 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxDriveLabel = new System.Windows.Forms.TextBox();
-            this.textBoxDriveLabel2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -110,10 +111,10 @@
             // btnMount
             // 
             this.btnMount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMount.Location = new System.Drawing.Point(230, 295);
+            this.btnMount.Location = new System.Drawing.Point(338, 295);
             this.btnMount.Margin = new System.Windows.Forms.Padding(2);
             this.btnMount.Name = "btnMount";
-            this.btnMount.Size = new System.Drawing.Size(155, 25);
+            this.btnMount.Size = new System.Drawing.Size(101, 25);
             this.btnMount.TabIndex = 11;
             this.btnMount.TabStop = false;
             this.btnMount.Text = "Mount";
@@ -183,10 +184,10 @@
             // btnUnmount
             // 
             this.btnUnmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUnmount.Location = new System.Drawing.Point(389, 295);
+            this.btnUnmount.Location = new System.Drawing.Point(447, 295);
             this.btnUnmount.Margin = new System.Windows.Forms.Padding(2);
             this.btnUnmount.Name = "btnUnmount";
-            this.btnUnmount.Size = new System.Drawing.Size(155, 25);
+            this.btnUnmount.Size = new System.Drawing.Size(101, 25);
             this.btnUnmount.TabIndex = 12;
             this.btnUnmount.TabStop = false;
             this.btnUnmount.Text = "Unmount";
@@ -197,7 +198,7 @@
             // 
             this.checkBoxRAAS.AutoSize = true;
             this.checkBoxRAAS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.checkBoxRAAS.Location = new System.Drawing.Point(68, 297);
+            this.checkBoxRAAS.Location = new System.Drawing.Point(176, 297);
             this.checkBoxRAAS.Name = "checkBoxRAAS";
             this.checkBoxRAAS.Size = new System.Drawing.Size(157, 21);
             this.checkBoxRAAS.TabIndex = 105;
@@ -263,6 +264,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // textBoxDriveLabel
+            // 
+            this.textBoxDriveLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxDriveLabel.Location = new System.Drawing.Point(367, 60);
+            this.textBoxDriveLabel.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDriveLabel.Name = "textBoxDriveLabel";
+            this.textBoxDriveLabel.Size = new System.Drawing.Size(156, 25);
+            this.textBoxDriveLabel.TabIndex = 114;
+            this.textBoxDriveLabel.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.Location = new System.Drawing.Point(321, 63);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.TabIndex = 113;
+            this.label3.Text = "Label:";
+            // 
+            // checkBoxDriveEnabled
+            // 
+            this.checkBoxDriveEnabled.AutoSize = true;
+            this.checkBoxDriveEnabled.Checked = true;
+            this.checkBoxDriveEnabled.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDriveEnabled.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.checkBoxDriveEnabled.Location = new System.Drawing.Point(6, -1);
+            this.checkBoxDriveEnabled.Name = "checkBoxDriveEnabled";
+            this.checkBoxDriveEnabled.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxDriveEnabled.TabIndex = 112;
+            this.checkBoxDriveEnabled.Text = "Drive 1";
+            this.checkBoxDriveEnabled.UseVisualStyleBackColor = true;
+            this.checkBoxDriveEnabled.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // CacheHelpLink
+            // 
+            this.CacheHelpLink.AutoSize = true;
+            this.CacheHelpLink.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CacheHelpLink.Location = new System.Drawing.Point(5, 63);
+            this.CacheHelpLink.Name = "CacheHelpLink";
+            this.CacheHelpLink.Size = new System.Drawing.Size(90, 17);
+            this.CacheHelpLink.TabIndex = 111;
+            this.CacheHelpLink.TabStop = true;
+            this.CacheHelpLink.Text = "Cache Option:";
+            this.CacheHelpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -282,6 +330,39 @@
             this.groupBox2.Size = new System.Drawing.Size(533, 96);
             this.groupBox2.TabIndex = 110;
             this.groupBox2.TabStop = false;
+            // 
+            // textBoxDriveLabel2
+            // 
+            this.textBoxDriveLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxDriveLabel2.Location = new System.Drawing.Point(367, 58);
+            this.textBoxDriveLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDriveLabel2.Name = "textBoxDriveLabel2";
+            this.textBoxDriveLabel2.Size = new System.Drawing.Size(156, 25);
+            this.textBoxDriveLabel2.TabIndex = 116;
+            this.textBoxDriveLabel2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.Location = new System.Drawing.Point(321, 61);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 17);
+            this.label4.TabIndex = 115;
+            this.label4.Text = "Label:";
+            // 
+            // checkBoxDriveEnabled2
+            // 
+            this.checkBoxDriveEnabled2.AutoSize = true;
+            this.checkBoxDriveEnabled2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.checkBoxDriveEnabled2.Location = new System.Drawing.Point(6, -1);
+            this.checkBoxDriveEnabled2.Name = "checkBoxDriveEnabled2";
+            this.checkBoxDriveEnabled2.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxDriveEnabled2.TabIndex = 113;
+            this.checkBoxDriveEnabled2.Text = "Drive 2";
+            this.checkBoxDriveEnabled2.UseVisualStyleBackColor = true;
+            this.checkBoxDriveEnabled2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
             // 
             // label1
             // 
@@ -330,6 +411,18 @@
             this.txtRemoteName2.TabIndex = 1;
             this.txtRemoteName2.TabStop = false;
             // 
+            // CacheHelpLink2
+            // 
+            this.CacheHelpLink2.AutoSize = true;
+            this.CacheHelpLink2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CacheHelpLink2.Location = new System.Drawing.Point(5, 61);
+            this.CacheHelpLink2.Name = "CacheHelpLink2";
+            this.CacheHelpLink2.Size = new System.Drawing.Size(90, 17);
+            this.CacheHelpLink2.TabIndex = 104;
+            this.CacheHelpLink2.TabStop = true;
+            this.CacheHelpLink2.Text = "Cache Option:";
+            this.CacheHelpLink2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblDocument_LinkClicked);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -353,30 +446,6 @@
             this.txtDriveLetter2.TabStop = false;
             this.txtDriveLetter2.Text = "Y";
             // 
-            // CacheHelpLink2
-            // 
-            this.CacheHelpLink2.AutoSize = true;
-            this.CacheHelpLink2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CacheHelpLink2.Location = new System.Drawing.Point(5, 61);
-            this.CacheHelpLink2.Name = "CacheHelpLink2";
-            this.CacheHelpLink2.Size = new System.Drawing.Size(90, 17);
-            this.CacheHelpLink2.TabIndex = 104;
-            this.CacheHelpLink2.TabStop = true;
-            this.CacheHelpLink2.Text = "Cache Option:";
-            this.CacheHelpLink2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblDocument_LinkClicked);
-            // 
-            // CacheHelpLink
-            // 
-            this.CacheHelpLink.AutoSize = true;
-            this.CacheHelpLink.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CacheHelpLink.Location = new System.Drawing.Point(5, 63);
-            this.CacheHelpLink.Name = "CacheHelpLink";
-            this.CacheHelpLink.Size = new System.Drawing.Size(90, 17);
-            this.CacheHelpLink.TabIndex = 111;
-            this.CacheHelpLink.TabStop = true;
-            this.CacheHelpLink.Text = "Cache Option:";
-            this.CacheHelpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
@@ -389,73 +458,18 @@
             this.linkLabel2.Text = "Github";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // checkBoxDriveEnabled
+            // button1
             // 
-            this.checkBoxDriveEnabled.AutoSize = true;
-            this.checkBoxDriveEnabled.Checked = true;
-            this.checkBoxDriveEnabled.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDriveEnabled.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.checkBoxDriveEnabled.Location = new System.Drawing.Point(6, -1);
-            this.checkBoxDriveEnabled.Name = "checkBoxDriveEnabled";
-            this.checkBoxDriveEnabled.Size = new System.Drawing.Size(68, 21);
-            this.checkBoxDriveEnabled.TabIndex = 112;
-            this.checkBoxDriveEnabled.Text = "Drive 1";
-            this.checkBoxDriveEnabled.UseVisualStyleBackColor = true;
-            this.checkBoxDriveEnabled.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxDriveEnabled2
-            // 
-            this.checkBoxDriveEnabled2.AutoSize = true;
-            this.checkBoxDriveEnabled2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.checkBoxDriveEnabled2.Location = new System.Drawing.Point(6, -1);
-            this.checkBoxDriveEnabled2.Name = "checkBoxDriveEnabled2";
-            this.checkBoxDriveEnabled2.Size = new System.Drawing.Size(68, 21);
-            this.checkBoxDriveEnabled2.TabIndex = 113;
-            this.checkBoxDriveEnabled2.Text = "Drive 2";
-            this.checkBoxDriveEnabled2.UseVisualStyleBackColor = true;
-            this.checkBoxDriveEnabled2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.Location = new System.Drawing.Point(321, 63);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
-            this.label3.TabIndex = 113;
-            this.label3.Text = "Label:";
-            // 
-            // textBoxDriveLabel
-            // 
-            this.textBoxDriveLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBoxDriveLabel.Location = new System.Drawing.Point(367, 60);
-            this.textBoxDriveLabel.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxDriveLabel.Name = "textBoxDriveLabel";
-            this.textBoxDriveLabel.Size = new System.Drawing.Size(156, 25);
-            this.textBoxDriveLabel.TabIndex = 114;
-            this.textBoxDriveLabel.TabStop = false;
-            // 
-            // textBoxDriveLabel2
-            // 
-            this.textBoxDriveLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBoxDriveLabel2.Location = new System.Drawing.Point(367, 58);
-            this.textBoxDriveLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxDriveLabel2.Name = "textBoxDriveLabel2";
-            this.textBoxDriveLabel2.Size = new System.Drawing.Size(156, 25);
-            this.textBoxDriveLabel2.TabIndex = 116;
-            this.textBoxDriveLabel2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.Location = new System.Drawing.Point(321, 61);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 115;
-            this.label4.Text = "Label:";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(63, 295);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 25);
+            this.button1.TabIndex = 112;
+            this.button1.TabStop = false;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RcloneMount
             // 
@@ -463,6 +477,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(561, 338);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnMount);
@@ -528,6 +543,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxDriveLabel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
 

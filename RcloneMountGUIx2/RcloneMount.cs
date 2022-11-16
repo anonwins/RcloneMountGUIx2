@@ -227,12 +227,18 @@ namespace RcloneMountGUI
             if (this.WindowState != FormWindowState.Minimized)
             {
                 Process[] processes = Process.GetProcesses();
+                int found_procs = 0;
                 foreach (Process processX in processes)
                 {
-                    if (processX.ProcessName == rcloneFileName)
-                    {
-                        MessageBox.Show("Mounted successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    if (processX.ProcessName == rcloneFileName) found_procs++;
+                }
+                if (found_procs>0)
+                {
+                    var s = (found_procs>1) ? "s" : "";
+                    MessageBox.Show(found_procs+" drive"+s+" mounted successfuly.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else
+                {
+                    MessageBox.Show("No drives were mounted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -242,13 +248,19 @@ namespace RcloneMountGUI
         {
             // Kills the process
             Process[] processes = Process.GetProcesses();
+            int found_procs = 0;
             foreach (Process process in processes)
             {
                 if (process.ProcessName == rcloneFileName)
                 {
                     process.Kill();
-                    MessageBox.Show("Unmounted successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    found_procs++;
                 }
+            }
+            if (found_procs>0)
+            {
+                var s = (found_procs>1) ? "s" : "";
+                MessageBox.Show(found_procs+" drive"+s+" unmounted successfuly.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -401,28 +413,31 @@ namespace RcloneMountGUI
             }
             else
             {
-                // Saves settings
-                RegistryKey key;
-                key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\RcloneMountGUI", true);
-
-                key.SetValue("RcloneLocation", txtRLocation.Text);
-
-                key.SetValue("DriveEnabled", checkBoxDriveEnabled.Checked);
-                key.SetValue("RemoteName", txtRemoteName.Text);
-                key.SetValue("DriveLetter", txtDriveLetter.Text);
-                key.SetValue("MountOptions", comboBoxMount.Text);
-                key.SetValue("ReadOnlyDrive", checkBoxReadonly.Checked);
-                key.SetValue("DriveLabel", textBoxDriveLabel.Text);
-                
-                key.SetValue("DriveEnabled2", checkBoxDriveEnabled2.Checked);
-                key.SetValue("RemoteName2", txtRemoteName2.Text);
-                key.SetValue("DriveLetter2", txtDriveLetter2.Text);
-                key.SetValue("MountOptions2", comboBoxMount2.Text);
-                key.SetValue("ReadOnlyDrive2", checkBoxReadonly2.Checked);
-                key.SetValue("DriveLabel2", textBoxDriveLabel2.Text);
-
+                saveTheSettings();
                 RcloneStart();
             }
+        }
+
+        private void saveTheSettings()
+        {
+            RegistryKey key;
+            key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\RcloneMountGUI", true);
+
+            key.SetValue("RcloneLocation", txtRLocation.Text);
+
+            key.SetValue("DriveEnabled", checkBoxDriveEnabled.Checked);
+            key.SetValue("RemoteName", txtRemoteName.Text);
+            key.SetValue("DriveLetter", txtDriveLetter.Text);
+            key.SetValue("MountOptions", comboBoxMount.Text);
+            key.SetValue("ReadOnlyDrive", checkBoxReadonly.Checked);
+            key.SetValue("DriveLabel", textBoxDriveLabel.Text);
+
+            key.SetValue("DriveEnabled2", checkBoxDriveEnabled2.Checked);
+            key.SetValue("RemoteName2", txtRemoteName2.Text);
+            key.SetValue("DriveLetter2", txtDriveLetter2.Text);
+            key.SetValue("MountOptions2", comboBoxMount2.Text);
+            key.SetValue("ReadOnlyDrive2", checkBoxReadonly2.Checked);
+            key.SetValue("DriveLabel2", textBoxDriveLabel2.Text);
         }
 
         private void btnUnmount_Click(object sender, EventArgs e)
@@ -547,6 +562,11 @@ namespace RcloneMountGUI
             RepaintBoxes();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saveTheSettings();
+            MessageBox.Show("Saved settings.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void RcloneMount_FormClosed(object sender, FormClosedEventArgs e)
         {
