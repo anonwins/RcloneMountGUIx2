@@ -12,6 +12,8 @@ This is a fork from ImnLu/RcloneMountGUI. These changes are implemented:
 
 ~ Add custom volume labels
 
+~ Save button
+
 *Requirements*
 1. rclone.exe (https://github.com/rclone/rclone/releases/)
 2. WinFsp (https://winfsp.dev/rel/)
